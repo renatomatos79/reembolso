@@ -4,20 +4,20 @@
 
     // campos do formulário
     self.id = ko.observable(0);
-    self.descricao = ko.observable("");
+    self.nome = ko.observable("");
     self.codigoExterno = ko.observable("");
 
     // limpa os campos
     self.resetValues = function () {
         self.id(0);
-        self.descricao("");
+        self.nome("");
         self.codigoExterno("");
     };
 
     // pesquisa
     var modelFunction = function (item) {
         console.log(item);
-        return new CentroCustoModel(item.Id, item.Descricao, item.CodigoExterno);
+        return new CentroCustoModel(item.Id, item.Nome, item.CodigoExterno);
     };
 
     // define a base para pesquisa
@@ -26,12 +26,12 @@
     // cria um novo registro
     self.submit = function (item) {
         var dataCreate = {
-            Descricao: item.descricao(),
+            Nome: item.nome(),
             CodigoExterno: item.codigoExterno()
         };
         var dataEdit = {
             Id: item.id(),
-            Descricao: item.descricao(),
+            Nome: item.nome(),
             CodigoExterno: item.codigoExterno()
         };
         var fnCreate = function (data) {
@@ -54,8 +54,8 @@
     self.modalDetails = function (item) {
         var fn = function () {
             self.id(item.id);
-            self.descricao(item.descricao);
-            self.codigoExterno(item.descricao);
+            self.nome(item.nome);
+            self.codigoExterno(item.nome);
         };
         self._modalDetails(fn);
     };
@@ -69,7 +69,7 @@
     self.modalEdit = function (item) {
         var fn = function () {
             self.id(item.id);
-            self.descricao(item.descricao);
+            self.nome(item.nome);
             self.codigoExterno(item.codigoExterno);
         };
         self._modalEdit(fn);
@@ -82,14 +82,14 @@
         self.bindValidate(
             $("#frmCreate"),
             rules = {
-                descricao: { required: true },
+                nome: { required: true },
                 codigoExterno: { required: true }
             }
         );
         self.bindValidate(
             $("#frmEdit"),
             rules = {
-                descricao: { required: true },
+                nome: { required: true },
                 codigoExterno: { required: true }
             }
         );

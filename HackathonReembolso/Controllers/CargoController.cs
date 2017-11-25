@@ -11,6 +11,12 @@ namespace HackathonReembolso.Mvc.Controllers
     public class CargoController : Controller
     {
         [HttpGet]
+        public JsonResult GetAll()
+        {
+            return Search(string.Empty, 1, int.MaxValue);
+        }
+
+        [HttpGet]
         public JsonResult Search(string query, int page, int records)
         {
             var result = new JsonResponse();

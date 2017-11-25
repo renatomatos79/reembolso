@@ -1,5 +1,5 @@
-﻿var CentroCustoModel = function (id, descricao, codigoExterno) {
+﻿var CentroCustoModel = function (id, nome, codigoExterno) {
     this.id = id;
-    this.descricao = descricao;
+    this.nome = nome;
     this.codigoExterno = codigoExterno;
 };

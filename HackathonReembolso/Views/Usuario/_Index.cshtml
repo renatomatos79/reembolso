@@ -11,10 +11,11 @@
     };
     table.AddField<HtmlField>("#", "id", 1);
     table.AddField<HtmlField>("Nome", "nome", 4);
-    table.AddField<HtmlField>("Código Externo", "codigoExterno", 2);
+    table.AddField<HtmlField>("Matrícula", "matricula", 1);
+    table.AddField<HtmlField>("CPF", "cpf", 1);
     table.AddField<HtmlActionField>("Ações", "", 2);
 
-    (table.HtmlFields[3] as HtmlActionField).Actions.RemoveAt(1);
+    (table.HtmlFields[4] as HtmlActionField).Actions.RemoveAt(1);
 }
 
 @Html.Table(table)

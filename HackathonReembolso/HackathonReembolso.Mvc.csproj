@@ -149,6 +149,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BancoController.cs" />
     <Compile Include="Controllers\CargoController.cs" />
     <Compile Include="Controllers\CentroCustoController.cs" />
     <Compile Include="Controllers\FontePagadoraController.cs" />
@@ -156,6 +157,7 @@
     <Compile Include="Controllers\GerenciaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PerfilController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -191,6 +193,9 @@
     <Content Include="Content\js\cadastros\cargo\cargo-classes.ko.js" />
     <Content Include="Content\js\cadastros\cargo\cargo.ko.js" />
     <Content Include="Content\js\cadastros\cargo\cargo.setup.js" />
+    <Content Include="Content\js\cadastros\usuario\usuario-classes.ko.js" />
+    <Content Include="Content\js\cadastros\usuario\usuario.ko.js" />
+    <Content Include="Content\js\cadastros\usuario\usuario.setup.js" />
     <Content Include="Content\js\cadastros\usuario\usuario-complete.js" />
     <Content Include="Content\js\core\HttpProxy.js" />
     <Content Include="Content\dataTables\css\dataTables.bootstrap.min.css" />
@@ -815,10 +820,15 @@
     <Content Include="Views\Gerencia\_Index.cshtml" />
     <Content Include="Views\Gerencia\_Setores.cshtml" />
     <Content Include="Views\Gerencia\_Aprovadores.cshtml" />
+    <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\Usuario\_Create.cshtml" />
+    <Content Include="Views\Usuario\_Edit.cshtml" />
+    <Content Include="Views\Usuario\_Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Usuario\" />
+    <Folder Include="Views\Banco\" />
+    <Folder Include="Views\Perfil\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

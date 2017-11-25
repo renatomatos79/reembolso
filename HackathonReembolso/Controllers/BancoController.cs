@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace HackathonReembolso.Mvc.Controllers
 {
-    public class CentroCustoController : Controller
+    public class BancoController : Controller
     {
         [HttpGet]
         public JsonResult GetAll()
@@ -22,12 +22,11 @@ namespace HackathonReembolso.Mvc.Controllers
             var result = new JsonResponse();
             try
             {
-                var response = new List<CentroCustoModel>
+                var response = new List<BancoModel>
                 {
-                    new CentroCustoModel { Id = 1, Nome = "SSI", CodigoExterno="SSI" },
-                    new CentroCustoModel { Id = 2, Nome = "Saúde", CodigoExterno="SAU" },
-                    new CentroCustoModel { Id = 3, Nome = "Contábil", CodigoExterno="CTBL" },
-                    new CentroCustoModel { Id = 4, Nome = "Inovação", CodigoExterno="INOVA" }
+                    new BancoModel { Id = 1, Codigo = "001", Nome = "Banco do Brasil" },
+                    new BancoModel { Id = 2, Codigo = "341", Nome = "Banco Itau" },
+                    new BancoModel { Id = 3, Codigo = "333", Nome = "Banco Santander" },
                 };
                 result = new JsonResponse { Data = response };
             }
@@ -40,7 +39,7 @@ namespace HackathonReembolso.Mvc.Controllers
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
-        // GET: Cargo
+        // GET: Banco
         public ActionResult Index()
         {
             return View();

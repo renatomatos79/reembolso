@@ -11,6 +11,12 @@ namespace HackathonReembolso.Mvc.Controllers
     public class GerenciaController : Controller
     {
         [HttpGet]
+        public JsonResult GetAll()
+        {
+            return Search(string.Empty, 1, int.MaxValue);
+        }
+
+        [HttpGet]
         public JsonResult GetGerenciaList(string nome)
         {
             var result = new JsonResponse();

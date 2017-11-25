@@ -13,20 +13,26 @@ namespace HackathonReembolso.Mvc.Controllers
         [HttpGet]
         public JsonResult GetUsuarioList(string nome)
         {
+            return Search(nome, 1, int.MaxValue);
+        }
+
+        [HttpGet]
+        public JsonResult Search(string query, int page, int records)
+        {
             var result = new JsonResponse();
             try
             {
                 var response = new List<UsuarioModel>
                 {
-                    new UsuarioModel { Id = 1, Nome = "Renato" },
-                    new UsuarioModel { Id = 2, Nome = "Rodrigo" },
-                    new UsuarioModel { Id = 3, Nome = "Rafael" },
-                    new UsuarioModel { Id = 4, Nome = "Rubens" },
-                    new UsuarioModel { Id = 5, Nome = "Armando" },
-                    new UsuarioModel { Id = 6, Nome = "Arnaldo" },
-                    new UsuarioModel { Id = 7, Nome = "Eduardo" }
+                    new UsuarioModel { Id = 1, Nome = "Renato", Matricula="1234", Cpf="79363610306" },
+                    new UsuarioModel { Id = 2, Nome = "Rodrigo", Matricula="1235", Cpf="62116215315"  },
+                    new UsuarioModel { Id = 3, Nome = "Rafael", Matricula="5432", Cpf=""  },
+                    new UsuarioModel { Id = 4, Nome = "Rubens", Matricula="0001", Cpf=""  },
+                    new UsuarioModel { Id = 5, Nome = "Armando", Matricula="0022", Cpf=""  },
+                    new UsuarioModel { Id = 6, Nome = "Arnaldo", Matricula="3322", Cpf=""  },
+                    new UsuarioModel { Id = 7, Nome = "Eduardo", Matricula="6699", Cpf="14254125487"  }
                 };
-                result = new JsonResponse { Data = response.Where(w=>w.Nome.ToUpper().Contains(nome.ToUpper())).ToList() };
+                result = new JsonResponse { Data = response };
             }
             catch (Exception ex)
             {
