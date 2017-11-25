@@ -44,6 +44,12 @@ namespace HackathonReembolso.Mvc
                         .Include("~/Content/js/cadastros/centro-custo/centro-custo-classes.ko.js")
                         .Include("~/Content/js/cadastros/centro-custo/centro-custo.ko.js")
                         .Include("~/Content/js/cadastros/centro-custo/centro-custo.setup.js"));
+
+            // cadastro de fonte pagadora
+            bundles.Add(new Bundle("~/bundles/js/fonte-pagadora")
+                        .Include("~/Content/js/cadastros/fonte-pagadora/fonte-pagadora-classes.ko.js")
+                        .Include("~/Content/js/cadastros/fonte-pagadora/fonte-pagadora.ko.js")
+                        .Include("~/Content/js/cadastros/fonte-pagadora/fonte-pagadora.setup.js"));
         }
     }
 }
