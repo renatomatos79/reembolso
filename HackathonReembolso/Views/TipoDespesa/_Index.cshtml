@@ -1,0 +1,22 @@
+﻿@using HackathonReembolso.Framework.Mvc.Components.Html
+@using HackathonReembolso.Framework.Mvc.Components
+
+@{
+    var table = new HtmlTable
+    {
+        Responsive = false,
+        EnableAddButton = true,
+        EnableSearch = true,
+        Pagging = new Pagging { RecordsPerPage = new List<int> { 15, 30, 50 } }
+    };
+    table.AddField<HtmlField>("#", "id", 1);
+    table.AddField<HtmlField>("Nome", "nome", 4);
+    table.AddField<HtmlBooleanField>("Req. Comprovante", "requerComprovante", 1);
+    table.AddField<HtmlBooleanField>("Req. Trajeto", "requerTrajeto", 1);
+    table.AddField<HtmlBooleanField>("Req. Autorização", "requerAutorizacao", 1);
+    table.AddField<HtmlActionField>("Ações", "", 2);
+
+    (table.HtmlFields[5] as HtmlActionField).Actions.RemoveAt(1);
+}
+
+@Html.Table(table)

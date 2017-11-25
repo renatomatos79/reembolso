@@ -158,6 +158,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PerfilController.cs" />
+    <Compile Include="Controllers\TipoDespesaController.cs" />
+    <Compile Include="Models\TipoDespesaModel.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -193,6 +195,9 @@
     <Content Include="Content\js\cadastros\cargo\cargo-classes.ko.js" />
     <Content Include="Content\js\cadastros\cargo\cargo.ko.js" />
     <Content Include="Content\js\cadastros\cargo\cargo.setup.js" />
+    <Content Include="Content\js\cadastros\tipo-despesa\tipo-despesa-classes.ko.js" />
+    <Content Include="Content\js\cadastros\tipo-despesa\tipo-despesa.ko.js" />
+    <Content Include="Content\js\cadastros\tipo-despesa\tipo-despesa.setup.js" />
     <Content Include="Content\js\cadastros\usuario\usuario-classes.ko.js" />
     <Content Include="Content\js\cadastros\usuario\usuario.ko.js" />
     <Content Include="Content\js\cadastros\usuario\usuario.setup.js" />
@@ -824,10 +829,13 @@
     <Content Include="Views\Usuario\_Create.cshtml" />
     <Content Include="Views\Usuario\_Edit.cshtml" />
     <Content Include="Views\Usuario\_Index.cshtml" />
+    <Content Include="Views\TipoDespesa\Index.cshtml" />
+    <Content Include="Views\TipoDespesa\_Create.cshtml" />
+    <Content Include="Views\TipoDespesa\_Edit.cshtml" />
+    <Content Include="Views\TipoDespesa\_Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Banco\" />
     <Folder Include="Views\Perfil\" />
   </ItemGroup>
   <ItemGroup>
