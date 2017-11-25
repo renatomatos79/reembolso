@@ -90,7 +90,7 @@ namespace HackathonReembolso.Framework.Helpers
 
         public static string Cdn
         {
-            get { return HelperSettings.ReadString("Cdn"); }
+            get { return HelperSettings.ReadString("URL.CDN"); }
         }
 
         public static string Template

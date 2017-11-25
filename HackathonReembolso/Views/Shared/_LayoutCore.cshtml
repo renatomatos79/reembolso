@@ -1,5 +1,5 @@
-﻿@using HackathonReembolso.Framework
-@using HackathonReembolso.Framework.MVC.Components
+﻿@using HackathonReembolso.Framework.Helpers
+@using HackathonReembolso.Framework.Mvc.Components
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -13,28 +13,28 @@
     <link rel="shortcut icon" href="@HelperConstants.Logos/gsnet.ico" type="image/x-icon">
 
     <!--Basic Styles-->
-    <link href="@HelperConstants.Template/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/template/1.4.1/assets/css/bootstrap.min.css" rel="stylesheet" />
     <link id="bootstrap-rtl-link" href="" rel="stylesheet" />
-    <link href="@HelperConstants.Template/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="@HelperConstants.Template/css/weather-icons.min.css" rel="stylesheet" />
+    <link href="~/Content/template/1.4.1/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/template/1.4.1/assets/css/weather-icons.min.css" rel="stylesheet" />
 
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300" rel="stylesheet" type="text/css">
 
     <!--Beyond styles-->
-    <link id="beyond-link" href="@HelperConstants.Template/css/beyond.min.css" rel="stylesheet" />
-    <link href="~/assets/css/select2.min.css" rel="stylesheet" />
-    <link href="@HelperConstants.Template/css/demo.min.css" rel="stylesheet" />
-    <link href="@HelperConstants.Template/css/typicons.min.css" rel="stylesheet" />
-    <link href="@HelperConstants.Template/css/animate.min.css" rel="stylesheet" />
-    <link href="@HelperConstants.Cdn/dataTables/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link id="beyond-link" href="~/Content/template/1.4.1/assets/css/beyond.min.css" rel="stylesheet" />
+    <link href="~/Content/template/1.4.1/assets/css/select2.min.css" rel="stylesheet" />
+    <link href="~/Content/template/1.4.1/assets/css/demo.min.css" rel="stylesheet" />
+    <link href="~/Content/template/1.4.1/assets/css/typicons.min.css" rel="stylesheet" />
+    <link href="~/Content/template/1.4.1/assets/css/animate.min.css" rel="stylesheet" />
+    <link href="~/Content/dataTables/css/dataTables.bootstrap.min.css" rel="stylesheet" />
     <link id="skin-link" href="" rel="stylesheet" type="text/css" />
 
     <!--Autocomplete-->
-    <link href="@HelperConstants.Cdn/jquery/jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Content/jquery/jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet" />
     <style>
         .ui-autocomplete-loading {
-            background: white url("@HelperConstants.Cdn/jquery/jquery-ui-1.11.4.custom/images/ui-anim_basic_16x16.gif") right center no-repeat;
+            background: white url("~/Content/jquery/jquery-ui-1.11.4.custom/images/ui-anim_basic_16x16.gif") right center no-repeat;
         }
     </style>
 
@@ -46,19 +46,19 @@
     </style>
 
     <!-- Site css -->
-    <link href="@HelperConstants.Cdn/site/bootstrap-helper.css" rel="stylesheet" />
-    <link href="@HelperConstants.Cdn/site/gsnet-site.css" rel="stylesheet" />
+    <link href="~/Content/site/bootstrap-helper.css" rel="stylesheet" />
+    <link href="~/Content/site/gsnet-site.css" rel="stylesheet" />
 
     <!-- Gsnet Scripts: Place this script in head to load scripts for "Skin Script" support-->
-    <script src="@HelperConstants.Cdn/site/gsnet-namespace.js"></script>
-    <script src="@HelperConstants.Cdn/site/gsnet-site.js"></script>
+    <script src="~/Content/site/gsnet-namespace.js"></script>
+    <script src="~/Content/site/gsnet-site.js"></script>
     <script>
         Gsnet.Site().SetURL('@ScriptHelper.GetBaseUrl()');
         Gsnet.Site().SetCDN('@HelperConstants.Cdn');
     </script>
 
     <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
-    <script src="@HelperConstants.Template/js/skins.js"></script>    
+    <script src="~/Content/template/1.4.1/assets/js/skins.js"></script>    
     
     <!-- page css -->
     @RenderSection("css", required: false)
@@ -67,33 +67,33 @@
     @RenderBody()
 
     <!--Basic Scripts-->
-    <script src="@HelperConstants.Template/js/jquery.min.js"></script>
-    <script src="@HelperConstants.Template/js/bootstrap.min.js"></script>
-    <script src="@HelperConstants.Template/js/slimscroll/jquery.slimscroll.min.js"></script>
-    <script src="@HelperConstants.Cdn/jquery/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+    <script src="~/Content/template/1.4.1/assets/js/jquery.min.js"></script>
+    <script src="~/Content/template/1.4.1/assets/js/bootstrap.min.js"></script>
+    <script src="~/Content/template/1.4.1/assets/js/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="~/Content/jquery/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
 
     <!--Beyond Scripts-->
-    <script src="@HelperConstants.Template/js/beyond.min.js"></script>
+    <script src="~/Content/template/1.4.1/assets/js/beyond.min.js"></script>
 
     <!--Bootstrap Tags Input-->
-    <script src="@HelperConstants.Template/js/tagsinput/bootstrap-tagsinput.js"></script>
+    <script src="~/Content/template/1.4.1/assets/js/tagsinput/bootstrap-tagsinput.js"></script>
 
     <!--Bootstrap Select-->
-    <script src="~/assets/js/select2.min.js"></script>
+    <script src="~/Content/template/1.4.1/assets/js/select2/select2.min.js"></script>
 
     <!--Gsnet Scripts-->
-    <script src="@HelperConstants.Cdn/site/gsnet-alerts.js"></script>
-    <script src="@HelperConstants.Cdn/site/gsnet-dialogs.js"></script>
+    <script src="~/Content/site/gsnet-alerts.js"></script>
+    <script src="~/Content/site/gsnet-dialogs.js"></script>
     <script src="~/Content/js/core/HttpProxy.js"></script>
     <script src="~/Content/js/model-base-ko.js"></script>
 
     <!-- Controle de sessão -->
-    <script src="~/Content/js/site/ajax-setup.js"></script>
+    <script src="~/Content/js/ajax-setup.js"></script>
 
-    <script>
+    @*<script>
         // InternalSite foi definido dentro de ajax-setup extendendo Gsnet.Site
         InternalSite.SetLoginURL("@FormsAuthentication.LoginUrl");
-    </script>
+    </script>*@
 
     <script>
         // evita que o ENTER seja pressionado e um post seja enviado a página nas consultas, cadastros etc.

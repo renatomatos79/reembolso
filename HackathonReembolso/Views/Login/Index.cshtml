@@ -1,0 +1,49 @@
+﻿@using HackathonReembolso.Framework.Helpers
+
+@{
+    ViewBag.Title = "Autenticação";
+    Layout = "~/Views/Shared/_LayoutCore.cshtml";
+}
+
+<div class="login-container animated fadeInDown">
+    <div class="loginbox bg-white">
+        <div class="loginbox-title">Autenticação</div>
+        <div class="loginbox-social">
+            <div class="social-title ">Escolha uma rede social</div>
+            <div class="social-buttons">
+                <a href="" class="button-facebook">
+                    <i class="social-icon fa fa-facebook"></i>
+                </a>
+                <a href="" class="button-twitter">
+                    <i class="social-icon fa fa-twitter"></i>
+                </a>
+                <a href="" class="button-google">
+                    <i class="social-icon fa fa-google-plus"></i>
+                </a>
+            </div>
+        </div>
+        <div class="loginbox-or">
+            <div class="or-line"></div>
+            <div class="or">Ou</div>
+        </div>
+        <div class="loginbox-textbox">
+            <input type="text" class="form-control" placeholder="matrícula" />
+        </div>
+        <div class="loginbox-textbox">
+            <input type="text" class="form-control" placeholder="senha" />
+        </div>
+        <div class="loginbox-forgot">
+            <a href="">Esqueci minha senha</a>
+        </div>
+        <div class="loginbox-submit">
+            <input type="button" class="btn btn-primary btn-block" value="Login">
+        </div>
+    </div>
+    <div class="logobox">
+    </div>
+</div>
+
+<!--Basic Scripts-->
+@*<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/slimscroll/jquery.slimscroll.min.js"></script>*@

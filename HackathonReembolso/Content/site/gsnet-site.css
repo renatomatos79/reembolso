@@ -1,0 +1,48 @@
+﻿.page-sidebar .sidebar-menu a
+{
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    line-height: 20px !important;
+    height: initial !important;
+}
+
+.navbar .navbar-brand small img {
+    position: absolute;
+}
+
+.navbar .navbar-brand small span {
+    position: relative;
+    margin-left: 40px;
+    font-size: 13px;
+    color: black;
+    font-family: 'Open Sans','Segoe UI';
+    font-weight: 600;
+}
+
+.navbar-account .account-area .login-area .info-gestor-title {
+    display: block;
+    font-size: 13px;
+    color: #EDEDED;
+    line-height: 17px;
+}
+
+.navbar-account .account-area .login-area .info-gestor-description {
+    display: block;
+    font-size: 10px;
+    color: #EDEDED;
+    line-height: 10px;
+}
+
+.has-error > div > .fa-remove {
+    margin-top: 3px;
+    margin-right: -8px;
+}
+
+.paginate_button > a {
+    height: 32px;
+}
+
+.paginate_button > a > i.fa {
+    width: 10px;
+    margin-top: 2px;
+}
