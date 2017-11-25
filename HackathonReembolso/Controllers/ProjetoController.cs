@@ -8,16 +8,17 @@ using System.Web.Mvc;
 
 namespace HackathonReembolso.Mvc.Controllers
 {
-    public class CentroCustoController : Controller
+    public class ProjetoController : Controller
     {
-        public List<CentroCustoModel> GetCCustos()
+        public List<ProjetoModel> GetProjetos()
         {
-            return new List<CentroCustoModel>
+            var gerente = new GerenciaController().GetGerencias();
+
+            return new List<ProjetoModel>
                 {
-                    new CentroCustoModel { Id = 1, Nome = "SSI", CodigoExterno="SSI" },
-                    new CentroCustoModel { Id = 2, Nome = "Saúde", CodigoExterno="SAU" },
-                    new CentroCustoModel { Id = 3, Nome = "Contábil", CodigoExterno="CTBL" },
-                    new CentroCustoModel { Id = 4, Nome = "Inovação", CodigoExterno="INOVA" }
+                    new ProjetoModel { Id = 1, Nome = "Compras", Gerente = gerente.FirstOrDefault(w=>w.Nome == "Renato") },
+                    new ProjetoModel { Id = 1, Nome = "Estoque", Gerente = gerente.FirstOrDefault(w=>w.Nome == "Renato") },
+                    new ProjetoModel { Id = 1, Nome = "RBAC", Gerente = gerente.FirstOrDefault(w=>w.Nome == "Rafael") }
                 };
         }
 
@@ -33,8 +34,7 @@ namespace HackathonReembolso.Mvc.Controllers
             var result = new JsonResponse();
             try
             {
-                
-                result = new JsonResponse { Data = GetCCustos() };
+                result = new JsonResponse { Data = GetProjetos() };
             }
             catch (Exception ex)
             {

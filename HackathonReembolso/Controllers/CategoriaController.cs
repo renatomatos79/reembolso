@@ -10,6 +10,18 @@ namespace HackathonReembolso.Mvc.Controllers
 {
     public class CategoriaController : Controller
     {
+        public List<CategoriaModel> GetAll()
+        {
+            var tipoDespesa = new TipoDespesaController().GetList();
+
+            return new List<CategoriaModel>
+                {
+                    new CategoriaModel { Id = 1, Descricao = "Uber", ValorFixo=false, TipoDespesa = tipoDespesa.FirstOrDefault(w=>w.Nome == "Taxi") },
+                    new CategoriaModel { Id = 2, Descricao = "Particular", ValorFixo=true, Valor=(decimal)25.0, TipoDespesa = tipoDespesa.FirstOrDefault(w=>w.Nome == "Taxi") },
+                    new CategoriaModel { Id = 3, Descricao = "Estacionamento", ValorFixo=false, TipoDespesa = tipoDespesa.FirstOrDefault(w=>w.Nome == "Estacionamento") }
+                };
+        }
+
         [HttpGet]
         public JsonResult GetCategoriaList(int tipoDespesaId)
         {
@@ -22,23 +34,14 @@ namespace HackathonReembolso.Mvc.Controllers
             var result = new JsonResponse();
             try
             {
-                var tipoDespesa = new TipoDespesaController().GetList();
-
-                var response = new List<CategoriaModel>
-                {
-                    new CategoriaModel { Id = 1, Descricao = "Uber", ValorFixo=false, TipoDespesa = tipoDespesa.FirstOrDefault(w=>w.Nome == "Taxi") },
-                    new CategoriaModel { Id = 2, Descricao = "Particular", ValorFixo=true, Valor=(decimal)25.0, TipoDespesa = tipoDespesa.FirstOrDefault(w=>w.Nome == "Taxi") },
-                    new CategoriaModel { Id = 3, Descricao = "Estacionamento", ValorFixo=false, TipoDespesa = tipoDespesa.FirstOrDefault(w=>w.Nome == "Estacionamento") }
-                };
-
                 var filter = new List<CategoriaModel>();
                 if (tipoDespesaId > 0)
                 {
-                    filter.AddRange(response.Where(w => w.TipoDespesa.Id == tipoDespesaId).ToList());
+                    filter.AddRange(GetAll().Where(w => w.TipoDespesa.Id == tipoDespesaId).ToList());
                 }
                 else
                 {
-                    filter.AddRange(response);
+                    filter.AddRange(GetAll());
                 }
 
                 result = new JsonResponse { Data = filter };

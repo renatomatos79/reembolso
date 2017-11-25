@@ -7,7 +7,7 @@ using System.Web;
 namespace HackathonReembolso.Mvc.Models
 {
     [Serializable]
-    public class DespesaStatus
+    public class DespesaStatusModel
     {
         [DataMember]
         public int Id { get; set; }

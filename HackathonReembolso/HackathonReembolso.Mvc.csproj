@@ -153,6 +153,7 @@
     <Compile Include="Controllers\CargoController.cs" />
     <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Controllers\CentroCustoController.cs" />
+    <Compile Include="Controllers\DespesaController.cs" />
     <Compile Include="Controllers\DespesaStatusController.cs" />
     <Compile Include="Controllers\FontePagadoraController.cs" />
     <Compile Include="Controllers\FonteRecursoController.cs" />
@@ -160,9 +161,12 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PerfilController.cs" />
+    <Compile Include="Controllers\ProjetoController.cs" />
     <Compile Include="Controllers\TipoDespesaController.cs" />
     <Compile Include="Models\CategoriaModel.cs" />
-    <Compile Include="Models\DespesaStatus.cs" />
+    <Compile Include="Models\DespesaModel.cs" />
+    <Compile Include="Models\DespesaStatusModel.cs" />
+    <Compile Include="Models\ProjetoModel.cs" />
     <Compile Include="Models\TipoDespesaModel.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
@@ -186,6 +190,9 @@
     <Content Include="Content\js\cadastros\categoria\categoria-classes.ko.js" />
     <Content Include="Content\js\cadastros\categoria\categoria.ko.js" />
     <Content Include="Content\js\cadastros\categoria\categoria.setup.js" />
+    <Content Include="Content\js\cadastros\despesa\despesa-classes.ko.js" />
+    <Content Include="Content\js\cadastros\despesa\despesa.ko.js" />
+    <Content Include="Content\js\cadastros\despesa\despesa.setup.js" />
     <Content Include="Content\js\cadastros\gerencia\gerencia-classes.ko.js" />
     <Content Include="Content\js\cadastros\gerencia\gerencia.ko.js" />
     <Content Include="Content\js\cadastros\gerencia\gerencia-complete.js" />
@@ -844,11 +851,16 @@
     <Content Include="Views\Categoria\_Create.cshtml" />
     <Content Include="Views\Categoria\_Edit.cshtml" />
     <Content Include="Views\Categoria\_Index.cshtml" />
+    <Content Include="Views\Despesa\Index.cshtml" />
+    <Content Include="Views\Despesa\_Create.cshtml" />
+    <Content Include="Views\Despesa\_Edit.cshtml" />
+    <Content Include="Views\Despesa\_Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\DespesaStatus\" />
     <Folder Include="Views\Perfil\" />
+    <Folder Include="Views\Projeto\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

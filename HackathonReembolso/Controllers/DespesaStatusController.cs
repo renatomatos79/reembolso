@@ -10,20 +10,25 @@ namespace HackathonReembolso.Mvc.Controllers
 {
     public class DespesaStatusController : Controller
     {
+        public List<DespesaStatusModel> GetStatus()
+        {
+            return new List<DespesaStatusModel>
+                {
+                    new DespesaStatusModel { Id = 1, Sigla = "C", Descricao = "Cadastro" },
+                    new DespesaStatusModel { Id = 2, Sigla = "R", Descricao = "Rejeitada" },
+                    new DespesaStatusModel { Id = 3, Sigla = "A", Descricao = "Aprovada" },
+                    new DespesaStatusModel { Id = 4, Sigla = "K", Descricao = "Cancelada" }
+                };
+        }
+
         [HttpGet]
         public JsonResult GetAll()
         {
             var result = new JsonResponse();
             try
             {
-                var response = new List<DespesaStatus>
-                {
-                    new DespesaStatus { Id = 1, Sigla = "C", Descricao = "Cadastro" },
-                    new DespesaStatus { Id = 2, Sigla = "R", Descricao = "Rejeitada" },
-                    new DespesaStatus { Id = 3, Sigla = "A", Descricao = "Aprovada" },
-                    new DespesaStatus { Id = 4, Sigla = "K", Descricao = "Cancelada" }
-                };
-                result = new JsonResponse { Data = response };
+                
+                result = new JsonResponse { Data = GetStatus() };
             }
             catch (Exception ex)
             {

@@ -10,6 +10,20 @@ namespace HackathonReembolso.Mvc.Controllers
 {
     public class GerenciaController : Controller
     {
+        public List<GerenciaModel> GetGerencias()
+        {
+            return new List<GerenciaModel>
+                {
+                    new GerenciaModel { Id = 1, Nome = "Renato" },
+                    new GerenciaModel { Id = 2, Nome = "Rodrigo" },
+                    new GerenciaModel { Id = 3, Nome = "Rafael" },
+                    new GerenciaModel { Id = 4, Nome = "Rubens" },
+                    new GerenciaModel { Id = 5, Nome = "Armando" },
+                    new GerenciaModel { Id = 6, Nome = "Arnaldo" },
+                    new GerenciaModel { Id = 7, Nome = "Eduardo" }
+                };
+        }
+
         [HttpGet]
         public JsonResult GetAll()
         {
@@ -22,17 +36,7 @@ namespace HackathonReembolso.Mvc.Controllers
             var result = new JsonResponse();
             try
             {
-                var response = new List<GerenciaModel>
-                {
-                    new GerenciaModel { Id = 1, Nome = "Renato" },
-                    new GerenciaModel { Id = 2, Nome = "Rodrigo" },
-                    new GerenciaModel { Id = 3, Nome = "Rafael" },
-                    new GerenciaModel { Id = 4, Nome = "Rubens" },
-                    new GerenciaModel { Id = 5, Nome = "Armando" },
-                    new GerenciaModel { Id = 6, Nome = "Arnaldo" },
-                    new GerenciaModel { Id = 7, Nome = "Eduardo" }
-                };
-                result = new JsonResponse { Data = response.Where(w => w.Nome.ToUpper().Contains(nome.ToUpper())).ToList() };
+                result = new JsonResponse { Data = GetGerencias().Where(w => w.Nome.ToUpper().Contains(nome.ToUpper())).ToList() };
             }
             catch (Exception ex)
             {

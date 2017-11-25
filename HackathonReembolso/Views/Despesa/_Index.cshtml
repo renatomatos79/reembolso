@@ -1,0 +1,26 @@
+﻿@using HackathonReembolso.Framework.Mvc.Components.Html
+@using HackathonReembolso.Framework.Mvc.Components
+
+@{
+    var table = new HtmlTable
+    {
+        Responsive = false,
+        EnableAddButton = true,
+        EnableSearch = true,
+        Pagging = new Pagging { RecordsPerPage = new List<int> { 15, 30, 50 } }
+    };
+
+    table.AddField<HtmlField>("#", "id", 1);
+    table.AddField<HtmlField>("Dt.Despesa", "dataDespesa", 1);
+    table.AddField<HtmlField>("Tipo", "tipoDespesaNome", 2);
+    table.AddField<HtmlField>("Categoria", "categoriaNome", 2);
+    table.AddField<HtmlField>("C.Custo", "centroCustoExterno", 1);
+    table.AddField<HtmlField>("Matrícula", "usuarioMatricula", 1);
+    table.AddField<HtmlField>("Usuário", "usuarioNome", 1);
+    table.AddField<HtmlField>("R$", "valor", 1);
+    table.AddField<HtmlActionField>("Ações", "", 2);
+
+    (table.HtmlFields[8] as HtmlActionField).Actions.RemoveAt(1);
+}
+
+@Html.Table(table)

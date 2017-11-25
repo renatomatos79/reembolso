@@ -3,7 +3,7 @@
 @using System.Web.Optimization
 
 @{
-    ViewBag.Title = "Cadastro de Tipo de Despesa";
+    ViewBag.Title = "Cadastro de Despesas";
     ViewBag.ShowHeaderButtons = true;
     Layout = "~/Views/Shared/_LayoutCoreContainer.cshtml";
 }
@@ -28,7 +28,7 @@
             new BreadCrumbModel
             {
                 Class = new BreadCrumbClass {ClassName = "active"},
-                Link = new BreadCrumbLink {Href = "/TipoDespesa", Text = "Tipo de Despesa"}
+                Link = new BreadCrumbLink {Href = "/Despesa", Text = "Categoria da despesa"}
             }
         };
         Html.RenderPartial("_BreadCrumb", data);
@@ -45,7 +45,7 @@
 <!-- /Body -->
 
 <!-- Create -->
-@Html.ShowModalCreate("divCreate", "Adicionar Tipo de Despesa", @Html.Partial("_Create", null).ToHtmlString())
+@Html.ShowModalCreate("divCreate", "Adicionar Despesa", @Html.Partial("_Create", null).ToHtmlString())
 
 <!-- Edit -->
 @*@Html.ShowModalEdit("divEdit", "Editar Cargo", @Html.Partial("_Edit", null).ToHtmlString())*@
@@ -59,5 +59,5 @@
     <script src="~/Content/validation/additional-methods.min.js"></script>
     <script src="~/Content/site/gsnet-htmltable.js"></script>
     <script src="~/Content/template/1.4.1/assets/js/bootbox/bootbox.js"></script>
-    @Scripts.Render("~/bundles/js/tipo-despesa")
+    @Scripts.Render("~/bundles/js/despesa")
 }

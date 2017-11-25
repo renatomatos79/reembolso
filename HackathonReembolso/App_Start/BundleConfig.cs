@@ -86,6 +86,13 @@ namespace HackathonReembolso.Mvc
                         .Include("~/Content/js/cadastros/categoria/categoria-classes.ko.js")
                         .Include("~/Content/js/cadastros/categoria/categoria.ko.js")
                         .Include("~/Content/js/cadastros/categoria/categoria.setup.js"));
+
+            bundles.Add(new Bundle("~/bundles/js/despesa")
+                        .Include("~/Content/js/cadastros/despesa/despesa-classes.ko.js")
+                        .Include("~/Content/js/cadastros/gerencia/gerencia-classes.ko.js")
+                        .Include("~/Content/js/cadastros/centro-custo/centro-custo-classes.ko.js")
+                        .Include("~/Content/js/cadastros/despesa/despesa.ko.js")
+                        .Include("~/Content/js/cadastros/despesa/despesa.setup.js"));
         }
     }
 }
