@@ -10,6 +10,16 @@ namespace HackathonReembolso.Mvc.Controllers
 {
     public class TipoDespesaController : Controller
     {
+        public List<TipoDespesaModel> GetList()
+        {
+            return new List<TipoDespesaModel>
+                {
+                    new TipoDespesaModel { Id = 1, Nome = "Taxi", RequerAutorizacao = true, RequerComprovante = true, RequerTrajeto = true },
+                    new TipoDespesaModel { Id = 2, Nome = "Transporte Público", RequerAutorizacao = true, RequerComprovante = false, RequerTrajeto = true },
+                    new TipoDespesaModel { Id = 3, Nome = "Estacionamento", RequerAutorizacao = true, RequerComprovante = false, RequerTrajeto = false }
+                };
+        }
+
         [HttpGet]
         public JsonResult GetAll()
         {
@@ -22,13 +32,7 @@ namespace HackathonReembolso.Mvc.Controllers
             var result = new JsonResponse();
             try
             {
-                var response = new List<TipoDespesaModel>
-                {
-                    new TipoDespesaModel { Id = 1, Nome = "Taxi", RequerAutorizacao = true, RequerComprovante = true, RequerTrajeto = true },
-                    new TipoDespesaModel { Id = 2, Nome = "Transporte Público", RequerAutorizacao = true, RequerComprovante = false, RequerTrajeto = true },
-                    new TipoDespesaModel { Id = 3, Nome = "Estacionamento", RequerAutorizacao = true, RequerComprovante = false, RequerTrajeto = false }
-                };
-                result = new JsonResponse { Data = response };
+                result = new JsonResponse { Data = GetList() };
             }
             catch (Exception ex)
             {

@@ -16,7 +16,7 @@ namespace HackathonReembolso.Mvc
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "TipoDespesa", action = "Index", id = UrlParameter.Optional },
+                defaults: new { controller = "Categoria", action = "Index", id = UrlParameter.Optional },
                 namespaces: new string[] { "HackathonReembolso.Mvc.Controllers" }
             );
         }

@@ -1,0 +1,26 @@
+﻿<form id="frmCreate" name="frmCreate" class="form-horizontal" role="form" method="POST">
+    <div class="form-group">
+        <label class="col-sm-2 control-label no-padding-right">Descrição</label>
+        <div class="col-sm-10">
+            <input id="descricao" name="descricao" type="text" class="form-control" style="margin-top: 5px;" data-bind="value: descricao" maxlength="50" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label no-padding-right">Tipo despesa</label>
+        <div class="col-sm-10">
+            <select id="tipoDespesaId" name="tipoDespesaId" class="form-control" data-bind="options: tipoDespesaList, optionsValue: 'id', optionsText: 'nome', value: tipoDespesaId, optionsCaption: 'Selecione...'"></select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label no-padding-right">Valor Fixo</label>
+        <div class="col-sm-10">
+            <select id="valorFixo" name="valorFixo" class="form-control" data-bind="options: valorFixoList, optionsValue: 'value', optionsText: 'text', value: valorFixo, optionsCaption: 'Selecione...'"></select>
+        </div>
+    </div>
+    <div class="form-group" data-bind="visible: valorFixo">
+        <label class="col-sm-2 control-label no-padding-right">Valor (R$)</label>
+        <div class="col-sm-10">
+            <input id="valor" name="valor" type="text" class="form-control" style="margin-top: 5px;" data-bind="value: valor" />
+        </div>
+    </div>    
+</form>

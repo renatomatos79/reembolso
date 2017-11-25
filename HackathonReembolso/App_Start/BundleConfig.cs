@@ -81,6 +81,11 @@ namespace HackathonReembolso.Mvc
                         .Include("~/Content/js/cadastros/tipo-despesa/tipo-despesa-classes.ko.js")
                         .Include("~/Content/js/cadastros/tipo-despesa/tipo-despesa.ko.js")
                         .Include("~/Content/js/cadastros/tipo-despesa/tipo-despesa.setup.js"));
+
+            bundles.Add(new Bundle("~/bundles/js/categoria")
+                        .Include("~/Content/js/cadastros/categoria/categoria-classes.ko.js")
+                        .Include("~/Content/js/cadastros/categoria/categoria.ko.js")
+                        .Include("~/Content/js/cadastros/categoria/categoria.setup.js"));
         }
     }
 }

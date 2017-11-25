@@ -151,6 +151,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BancoController.cs" />
     <Compile Include="Controllers\CargoController.cs" />
+    <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Controllers\CentroCustoController.cs" />
     <Compile Include="Controllers\DespesaStatusController.cs" />
     <Compile Include="Controllers\FontePagadoraController.cs" />
@@ -160,6 +161,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PerfilController.cs" />
     <Compile Include="Controllers\TipoDespesaController.cs" />
+    <Compile Include="Models\CategoriaModel.cs" />
     <Compile Include="Models\DespesaStatus.cs" />
     <Compile Include="Models\TipoDespesaModel.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
@@ -181,6 +183,9 @@
     <Content Include="Content\images\ico.png" />
     <Content Include="Content\images\logo.png" />
     <Content Include="Content\js\ajax-setup.js" />
+    <Content Include="Content\js\cadastros\categoria\categoria-classes.ko.js" />
+    <Content Include="Content\js\cadastros\categoria\categoria.ko.js" />
+    <Content Include="Content\js\cadastros\categoria\categoria.setup.js" />
     <Content Include="Content\js\cadastros\gerencia\gerencia-classes.ko.js" />
     <Content Include="Content\js\cadastros\gerencia\gerencia.ko.js" />
     <Content Include="Content\js\cadastros\gerencia\gerencia-complete.js" />
@@ -835,6 +840,10 @@
     <Content Include="Views\TipoDespesa\_Create.cshtml" />
     <Content Include="Views\TipoDespesa\_Edit.cshtml" />
     <Content Include="Views\TipoDespesa\_Index.cshtml" />
+    <Content Include="Views\Categoria\Index.cshtml" />
+    <Content Include="Views\Categoria\_Create.cshtml" />
+    <Content Include="Views\Categoria\_Edit.cshtml" />
+    <Content Include="Views\Categoria\_Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
