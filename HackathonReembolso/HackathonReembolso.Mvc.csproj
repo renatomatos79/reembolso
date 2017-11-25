@@ -156,15 +156,19 @@
     <Compile Include="Controllers\GerenciaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BancoModel.cs" />
     <Compile Include="Models\BreadCrumbModel.cs" />
     <Compile Include="Models\CargoModel.cs" />
     <Compile Include="Models\CentroCustoModel.cs" />
     <Compile Include="Models\FontePagadoraModel.cs" />
     <Compile Include="Models\FonteRecursoModel.cs" />
     <Compile Include="Models\GerenciaModel.cs" />
+    <Compile Include="Models\PerfilModel.cs" />
+    <Compile Include="Models\UsuarioModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -810,6 +814,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Usuario\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
