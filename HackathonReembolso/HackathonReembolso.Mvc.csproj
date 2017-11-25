@@ -177,6 +177,7 @@
     <Content Include="Content\js\ajax-setup.js" />
     <Content Include="Content\js\cadastros\gerencia\gerencia-classes.ko.js" />
     <Content Include="Content\js\cadastros\gerencia\gerencia.ko.js" />
+    <Content Include="Content\js\cadastros\gerencia\gerencia-complete.js" />
     <Content Include="Content\js\cadastros\gerencia\gerencia.setup.js" />
     <Content Include="Content\js\cadastros\fonte-recurso\fonte-recurso-classes.ko.js" />
     <Content Include="Content\js\cadastros\fonte-recurso\fonte-recurso.ko.js" />

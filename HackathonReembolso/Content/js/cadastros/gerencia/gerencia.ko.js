@@ -27,70 +27,22 @@
 
     // configura o autoComplete para o departamento pai
     self.autoCompleteGerencia = function () {
-        $("#createGerenciaSuperiorId,#editGerenciaSuperiorId").autocomplete({
-            minLength: 3,
-            source: function (request, response) {
-                self._ajax({
-                    url: "/Gerencia/GetGerenciaList?nome=" + request.term,
-                    data: {},
-                    onComplete: function (data) {
-                        response($.map(data, function (item) {
-                            return {
-                                label: item.Nome,
-                                value: item.Id
-                            };
-                        }));
-                    }
-                });
-                $(".ui-autocomplete").css('z-index', 9999);
-            },
-            select: function (e, ui) {
-                e.preventDefault();
-                $(e.target).val(ui.item.label);
+        var autoComplete = new GerenciaAutoComplete({
+            selector: "#createGerenciaSuperiorId,#editGerenciaSuperiorId",
+            ajax: self._ajax,
+            onSelect: function (ui, item) {
                 self.gerenciaSuperiorId(ui.item.value);
-            }
-        });
-
-        $("#createGerenciaSuperiorId,#editGerenciaSuperiorId").on("blur", function (event) {
-            Gsnet.Alerts().clearAlerts();
-            var nome = $(this).val().trim();
-            var controle = $(this);
-            var form = controle.parent().parent().parent().attr("name");
-            if (nome === "") {
-                self.gerenciaSuperiorId(null);
-            } else {
-                var fn = function (gerencia) {
-                    if (gerencia.value === "") {
-                        self._addDanger(form, "Gerência não encontrada!", "Atenção!");
-                        self.gerenciaSuperiorId(null);
-                        controle.val("");
-                    } else {
-                        self.gerenciaSuperiorId(gerencia.value);
-                        controle.val(gerencia.label);
-                    }
+            },
+            onBlur: function (obj) {
+                if (obj !== null) {
+                    self.gerenciaSuperiorId(obj.value);
+                } else {
+                    self.gerenciaSuperiorId(null);
                 }
-                self.getGerenciaByName(nome, fn);
             }
         });
-    }
-
-    self.getGerenciaByName = function (name, callback) {
-        var result = { value: "", label: "" };
-        if ($.trim(name) === '') {
-            callback(result);
-            return;
-        }
-        return self._ajax({
-            url: "/Gerencia/GetGerenciaList",
-            data: { nome: name },
-            onComplete: function (data) {
-                if (data.length > 0) {
-                    result = { value: data[0].Id, label: data[0].Nome };
-                }
-                callback(result);
-            }
-        });
-    }
+        autoComplete.setup();
+    }    
 
     // cria um novo registro
     self.submit = function (item) {
