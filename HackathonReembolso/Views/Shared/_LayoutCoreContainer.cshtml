@@ -1,6 +1,4 @@
-﻿@using Prodesp.Gsnet.Core.Presentation.MVC.Implementation
-@using HackathonReembolso.Framework
-@using Prodesp.Gsnet.Rbac.Presentation.Mvc.Models
+﻿@using HackathonReembolso.Framework.Helpers
 
 @{
     Layout = "~/Views/Shared/_LayoutCore.cshtml";
@@ -18,7 +16,7 @@
             <div class="navbar-header pull-left">
                 <a href="#" class="navbar-brand">
                     <small>
-                        <img src="@HelperConstants.Logos/logo.png" alt="" />
+                        <img src="~/Content/images/logo.png" alt="" />
                         <span>@HelperConstants.ApplicationName</span>
                     </small>
                 </a>
@@ -29,14 +27,16 @@
                 <i class="collapse-icon fa fa-bars"></i>
             </div>
             <!-- /Toggle Button --->
-            <!-- Conta do usuário --->
+            
+            @*<!-- Conta do usuário --->
             @{
                 Html.RenderPartial("_Settings", new List<ViewNameModel>
                 {
                     new ViewNameModel { PartialViewName = "_Account", Model = null }
                 });
             }
-            <!-- /Conta do usuário --->
+            <!-- /Conta do usuário --->*@
+
         </div>
     </div>
 </div>
@@ -51,11 +51,6 @@
             Html.RenderPartial("_Menu", null);
         }
 
-        <!-- /Menu lateral --->
-        @if (ViewBag.ShowChat == true)
-        {
-            Html.RenderPartial("_Chat", null);
-        }
         <!-- Page Content -->
         <div class="page-content">
             @RenderSection("breadcrumb", required: false)
@@ -84,6 +79,6 @@
 <!-- /Main Container -->
 @section scripts {
     @RenderSection("scripts", required: false)
-    @Scripts.Render("~/bundles/js/usuario-image-handler")
-    @Scripts.Render("~/bundles/js/nav-menu")    
+    @*@Scripts.Render("~/bundles/js/usuario-image-handler")*@
+    @Scripts.Render("~/bundles/js/nav-menu")
 }

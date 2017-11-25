@@ -1,0 +1,19 @@
+﻿@model List<HackathonReembolso.Mvc.Models.BreadCrumbModel>
+
+<div class="page-breadcrumbs">
+    <ul class="breadcrumb">
+        @foreach (var li in Model)
+        {
+            <li>
+                @if (li.Class != null)
+                {
+                    <i class="@li.Class.ClassName">@li.Class.Text</i>
+                }
+                @if (li.Link != null)
+                {
+                    <a href="@li.Link.Href">@li.Link.Text</a>
+                }
+            </li>
+        }
+    </ul>
+</div>

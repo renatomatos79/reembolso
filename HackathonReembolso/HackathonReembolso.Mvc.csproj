@@ -154,11 +154,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BreadCrumbModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\ico.png" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\js\ajax-setup.js" />
     <Content Include="Content\js\core\HttpProxy.js" />
     <Content Include="Content\dataTables\css\dataTables.bootstrap.min.css" />
     <Content Include="Content\dataTables\css\jquery.dataTables.min.css" />
@@ -197,8 +201,13 @@
     <Content Include="Content\jquery\jquery.numeric.js" />
     <Content Include="Content\jquery\jquery.pagination.js" />
     <Content Include="Content\jquery\jquery.validate.min.js" />
+    <Content Include="Content\site\masks.js" />
+    <Content Include="Content\js\menu\menu-item.js" />
+    <Content Include="Content\js\menu\menu-json-helper.js" />
+    <Content Include="Content\js\menu\menu-setup.js" />
+    <Content Include="Content\js\menu\menu.js" />
+    <Content Include="Content\js\model-base-ko.js" />
     <Content Include="Content\knockout\3.2.0\knockout.js" />
-    <Content Include="Content\model-base-ko.js" />
     <Content Include="Content\site\bootstrap-helper.css" />
     <Content Include="Content\site\gsnet-alerts.js" />
     <Content Include="Content\site\gsnet-dialogs.js" />
@@ -448,7 +457,6 @@
     <Content Include="Content\template\1.4.1\assets\js\select2\select2.js" />
     <Content Include="Content\template\1.4.1\assets\js\select2\select2.min.js" />
     <Content Include="Content\template\1.4.1\assets\js\skins.js" />
-    <Content Include="Content\template\1.4.1\assets\js\skins.min.js" />
     <Content Include="Content\template\1.4.1\assets\js\slider\jQRangeSlider\jQAllRangeSliders-withRuler-min.js" />
     <Content Include="Content\template\1.4.1\assets\js\slider\jQRangeSlider\jquery.mousewheel.min.js" />
     <Content Include="Content\template\1.4.1\assets\js\slider\jquery.nouislider.js" />
@@ -754,11 +762,13 @@
     <Content Include="Views\Shared\_LayoutCore.cshtml" />
     <Content Include="Views\Shared\_LayoutCoreContainer.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Shared\_BreadCrumb.cshtml" />
+    <Content Include="Views\Shared\_Menu.cshtml" />
+    <Content Include="Views\Shared\_HeaderButtons.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\js\cadastros\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

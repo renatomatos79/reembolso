@@ -26,6 +26,12 @@ namespace HackathonReembolso.Mvc
             //bundles.Add(new StyleBundle("~/Content/css").Include(
             //          "~/Content/bootstrap.css",
             //          "~/Content/site.css"));
+
+            bundles.Add(new Bundle("~/bundles/js/nav-menu")
+                        .Include("~/Content/js/menu/menu-item.js")
+                        .Include("~/Content/js/menu/menu.js")
+                        .Include("~/Content/js/menu/menu-json-helper.js")
+                        .Include("~/Content/js/menu/menu-setup.js"));
         }
     }
 }
