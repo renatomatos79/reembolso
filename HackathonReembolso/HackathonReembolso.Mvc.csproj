@@ -191,6 +191,7 @@
     <Content Include="Content\js\cadastros\cargo\cargo-classes.ko.js" />
     <Content Include="Content\js\cadastros\cargo\cargo.ko.js" />
     <Content Include="Content\js\cadastros\cargo\cargo.setup.js" />
+    <Content Include="Content\js\cadastros\usuario\usuario-complete.js" />
     <Content Include="Content\js\core\HttpProxy.js" />
     <Content Include="Content\dataTables\css\dataTables.bootstrap.min.css" />
     <Content Include="Content\dataTables\css\jquery.dataTables.min.css" />
@@ -813,6 +814,7 @@
     <Content Include="Views\Gerencia\_Edit.cshtml" />
     <Content Include="Views\Gerencia\_Index.cshtml" />
     <Content Include="Views\Gerencia\_Setores.cshtml" />
+    <Content Include="Views\Gerencia\_Aprovadores.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

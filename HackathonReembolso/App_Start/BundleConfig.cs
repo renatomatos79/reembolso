@@ -62,6 +62,7 @@ namespace HackathonReembolso.Mvc
                         .Include("~/Content/js/cadastros/gerencia/gerencia-classes.ko.js")
                         .Include("~/Content/js/cadastros/gerencia/gerencia.ko.js")
                         .Include("~/Content/js/cadastros/gerencia/gerencia-complete.js")
+                        .Include("~/Content/js/cadastros/usuario/usuario-complete.js")
                         .Include("~/Content/js/cadastros/gerencia/gerencia.setup.js"));
         }
     }

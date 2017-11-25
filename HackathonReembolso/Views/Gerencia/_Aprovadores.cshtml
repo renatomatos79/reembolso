@@ -1,0 +1,39 @@
+﻿<div class="widget radius-bordered">
+    <div class="widget-header">
+        <span class="widget-caption">Aprovadores associados a gerência</span>
+        <div class="widget-buttons buttons-bordered">
+            <button class="btn btn-blue btn-xs" style="margin-top: 5px" data-bind="click: addAprovador">Adicionar</button>
+        </div>
+    </div>
+    <div class="widget-body">
+        <table id="tabAprovadores" class="table table-condensed table-responsive">
+            <tbody data-bind="foreach: aprovadores">
+                <tr>
+                    <td colspan="2">
+                        <input id="usuarioId" name="usuarioId" type="text" class="form-control usuario-complete" style="margin-top: 5px;" placeholder="Ex: Renato" />
+                    </td>
+                    <td>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" class="colored-success" checked="checked">
+                                <span class="text">Suplente</span>
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input id="dataInicioVigencia" name="dataInicioVigencia" type="text" class="form-control mask-date" style="margin-top: 5px;" placeholder="Ex: Início da vigência" maxlength="10" />
+                    </td>
+                    <td>
+                        <input id="dataTerminoVigencia" name="dataTerminoVigencia" type="text" class="form-control mask-date" style="margin-top: 5px;" placeholder="Ex: Término da vigência" maxlength="10" />
+                    </td>
+                    <td>
+                        <a href="#" class="btn btn-danger btn-xs delete" style="margin-top: 2px !important;" data-bind="click: $root.deleteAprovador"><i class="fa fa-trash-o"></i>Excluir</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
