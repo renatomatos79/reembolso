@@ -30,6 +30,7 @@
 
     // informativo
     self.gerenciaNome = ko.observable("");
+    self.centroCustoCodigoExterno = ko.observable("");
 
     // limpa os campos
     self.resetValues = function () {
