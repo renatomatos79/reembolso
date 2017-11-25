@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace HackathonReembolso
+namespace HackathonReembolso.Mvc
 {
     public class FilterConfig
     {

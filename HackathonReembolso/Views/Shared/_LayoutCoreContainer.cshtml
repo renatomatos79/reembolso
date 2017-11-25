@@ -1,0 +1,89 @@
+﻿@using Prodesp.Gsnet.Core.Presentation.MVC.Implementation
+@using HackathonReembolso.Framework
+@using Prodesp.Gsnet.Rbac.Presentation.Mvc.Models
+
+@{
+    Layout = "~/Views/Shared/_LayoutCore.cshtml";
+}
+
+@section css {
+    @RenderSection("css", required: false)
+}
+
+<!--  NavBar -->
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <div class="navbar-header pull-left">
+                <a href="#" class="navbar-brand">
+                    <small>
+                        <img src="@HelperConstants.Logos/logo.png" alt="" />
+                        <span>@HelperConstants.ApplicationName</span>
+                    </small>
+                </a>
+            </div>
+            <!-- /Logo -->
+            <!-- Toggle Button --->
+            <div class="sidebar-collapse" id="sidebar-collapse">
+                <i class="collapse-icon fa fa-bars"></i>
+            </div>
+            <!-- /Toggle Button --->
+            <!-- Conta do usuário --->
+            @{
+                Html.RenderPartial("_Settings", new List<ViewNameModel>
+                {
+                    new ViewNameModel { PartialViewName = "_Account", Model = null }
+                });
+            }
+            <!-- /Conta do usuário --->
+        </div>
+    </div>
+</div>
+<!--  /NavBar -->
+<!-- Main Container -->
+<div class="main-container container-fluid">
+    <!-- Page Container -->
+    <div class="page-container">
+        <!-- Menu lateral --->
+        
+        @{
+            Html.RenderPartial("_Menu", null);
+        }
+
+        <!-- /Menu lateral --->
+        @if (ViewBag.ShowChat == true)
+        {
+            Html.RenderPartial("_Chat", null);
+        }
+        <!-- Page Content -->
+        <div class="page-content">
+            @RenderSection("breadcrumb", required: false)
+            <div class="page-header position-relative">
+                <div class="header-title">
+                    <h1>@ViewBag.Title</h1>
+                </div>
+
+                @if (ViewBag.ShowHeaderButtons == true)
+                {
+                    Html.RenderPartial("_HeaderButtons", null);
+                }
+            </div>
+            <div class="page-body" id="page-body">
+                @RenderBody()
+
+                
+                <div id="container-table-data" class="table-responsive"></div>
+            </div>
+        </div>
+        <!-- /Page Content -->
+    </div>
+    <!-- /Page Container -->
+</div>
+
+<!-- /Main Container -->
+@section scripts {
+    @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/js/usuario-image-handler")
+    @Scripts.Render("~/bundles/js/nav-menu")    
+}
