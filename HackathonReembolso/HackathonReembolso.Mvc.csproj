@@ -153,6 +153,7 @@
     <Compile Include="Controllers\CentroCustoController.cs" />
     <Compile Include="Controllers\FontePagadoraController.cs" />
     <Compile Include="Controllers\FonteRecursoController.cs" />
+    <Compile Include="Controllers\GerenciaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
@@ -163,12 +164,16 @@
     <Compile Include="Models\CentroCustoModel.cs" />
     <Compile Include="Models\FontePagadoraModel.cs" />
     <Compile Include="Models\FonteRecursoModel.cs" />
+    <Compile Include="Models\GerenciaModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\images\ico.png" />
     <Content Include="Content\images\logo.png" />
     <Content Include="Content\js\ajax-setup.js" />
+    <Content Include="Content\js\cadastros\gerencia\gerencia-classes.ko.js" />
+    <Content Include="Content\js\cadastros\gerencia\gerencia.ko.js" />
+    <Content Include="Content\js\cadastros\gerencia\gerencia.setup.js" />
     <Content Include="Content\js\cadastros\fonte-recurso\fonte-recurso-classes.ko.js" />
     <Content Include="Content\js\cadastros\fonte-recurso\fonte-recurso.ko.js" />
     <Content Include="Content\js\cadastros\fonte-recurso\fonte-recurso.setup.js" />
@@ -798,6 +803,10 @@
     <Content Include="Views\FonteRecurso\_Create.cshtml" />
     <Content Include="Views\FonteRecurso\_Edit.cshtml" />
     <Content Include="Views\FonteRecurso\_Index.cshtml" />
+    <Content Include="Views\Gerencia\Index.cshtml" />
+    <Content Include="Views\Gerencia\_Create.cshtml" />
+    <Content Include="Views\Gerencia\_Edit.cshtml" />
+    <Content Include="Views\Gerencia\_Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
