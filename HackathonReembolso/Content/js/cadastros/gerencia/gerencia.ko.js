@@ -6,14 +6,14 @@
     self.id = ko.observable(0);
     self.nome = ko.observable("");
     self.gerenciaSuperiorId = ko.observable(0);
-    self.setores = ko.observableArray([]);
+    self.setores = new ko.observableArray([]);
 
     // limpa os campos
     self.resetValues = function () {
         self.id(0);
         self.nome("");
         self.gerenciaSuperiorId(0);
-        self.setores([]);
+        self.setores.removeAll();
     };
 
     // pesquisa
@@ -98,6 +98,17 @@
             self.setores(item.setores);
         };
         self._modalEdit(fn);
+    };
+
+    // add setor
+    self.addSetor = function () {
+        self.setores.push(new GerenciaSetorModel(0, ""));
+        return self;
+    };
+
+    self.deleteSetor = function (item) {
+        self.setores.remove(item);
+        return self;
     };
 
     // regras de validação

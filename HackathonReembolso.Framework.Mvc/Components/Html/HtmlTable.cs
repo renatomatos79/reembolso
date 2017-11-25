@@ -73,7 +73,7 @@ namespace HackathonReembolso.Framework.Mvc.Components.Html
             table.AppendLine("<div class='widget' data-bind='visible: listLoaded()' style='display: none;'>");
 
             var enablePagging = (Pagging != null);
-            var reloadTableDatabind = ReloadTableDatabind ?? "click: LoadTable";
+            var reloadTableDatabind = ReloadTableDatabind ?? "click: _loadTable";
 
             #region Add Button / Search
 
@@ -162,7 +162,7 @@ namespace HackathonReembolso.Framework.Mvc.Components.Html
             table.AppendLine("              <tr data-bind='visible: table().length == 0'>");
             table.AppendLine("                  <td colspan='" + this.HtmlFields.Count + "' style='text-align: center'>");
             table.AppendLine("                      Nenhum registro encontrado");
-            table.AppendLine("                      <br/> <input type='button' class='btn btn-primary btn-xs' data-bind='click: loadTable' style='margin-top: 15px;' value='Reinicie sua busca'>");
+            table.AppendLine("                      <br/> <input type='button' class='btn btn-primary btn-xs' data-bind='click: _loadTable' style='margin-top: 15px;' value='Reinicie sua busca'>");
             table.AppendLine("                  </td>");
             table.AppendLine("              </tr>");
 

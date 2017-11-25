@@ -1,0 +1,22 @@
+﻿<div class="widget radius-bordered">
+    <div class="widget-header">
+        <span class="widget-caption">Setores associados a gerência</span>
+        <div class="widget-buttons buttons-bordered">
+            <button class="btn btn-blue btn-xs" style="margin-top: 5px" data-bind="click: addSetor">Adicionar</button>
+        </div>
+    </div>
+    <div class="widget-body">
+        <table class="table table-condensed table-responsive">
+            <tbody data-bind="foreach: setores">
+                <tr>
+                    <td>
+                        <input id="nome" name="nome" type="text" class="form-control" style="margin-top: 5px;" data-bind="value: nome" placeholder="Ex: Financeiro" />
+                    </td>
+                    <td>
+                        <a href="#" class="btn btn-danger btn-xs delete" style="margin-top: 2px !important;" data-bind="click: $root.deleteSetor"><i class="fa fa-trash-o"></i>Excluir</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
