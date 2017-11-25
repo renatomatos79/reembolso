@@ -152,6 +152,7 @@
     <Compile Include="Controllers\BancoController.cs" />
     <Compile Include="Controllers\CargoController.cs" />
     <Compile Include="Controllers\CentroCustoController.cs" />
+    <Compile Include="Controllers\DespesaStatusController.cs" />
     <Compile Include="Controllers\FontePagadoraController.cs" />
     <Compile Include="Controllers\FonteRecursoController.cs" />
     <Compile Include="Controllers\GerenciaController.cs" />
@@ -159,6 +160,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PerfilController.cs" />
     <Compile Include="Controllers\TipoDespesaController.cs" />
+    <Compile Include="Models\DespesaStatus.cs" />
     <Compile Include="Models\TipoDespesaModel.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
@@ -836,6 +838,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\DespesaStatus\" />
     <Folder Include="Views\Perfil\" />
   </ItemGroup>
   <ItemGroup>
