@@ -1,87 +1,117 @@
 ﻿<form id="frmCreate" name="frmCreate" class="form-horizontal" role="form" method="POST">
-    <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right">Tipo despesa</label>
-        <div class="col-sm-10">
-            <select id="tipoDespesaId" name="tipoDespesaId" class="form-control" data-bind="options: tipoDespesaList, optionsValue: 'id', optionsText: 'nome', value: tipoDespesaId, optionsCaption: 'Selecione...'"></select>
+    <div class="row">
+        <div class="col-lg-6 col-sm-6">
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Tipo despesa</label>
+                <div class="col-sm-9">
+                    <select id="tipoDespesaId" name="tipoDespesaId" class="form-control" data-bind="options: tipoDespesaList, optionsValue: 'id', optionsText: 'nome', value: tipoDespesaId, optionsCaption: 'Selecione...'"></select>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Categoria</label>
+                <div class="col-sm-9">
+                    <select id="categoriaId" name="categoriaId" class="form-control" data-bind="options: categoriaList, optionsValue: 'id', optionsText: 'nome', value: categoriaId, optionsCaption: 'Selecione...'"></select>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right">Categoria</label>
-        <div class="col-sm-10">
-            <select id="categoriaId" name="categoriaId" class="form-control" data-bind="options: categoriaList, optionsValue: 'id', optionsText: 'nome', value: categoriaId, optionsCaption: 'Selecione...'"></select>
+
+    <div class="row">
+        <div class="col-lg-6 col-sm-6">
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">C.Custo</label>
+                <div class="col-sm-9">
+                    <select id="centroCusto" name="centroCusto" class="form-control" data-bind="options: centroCustoList, optionsValue: 'centroCustoId', optionsText: 'nome', value: id, optionsCaption: 'Selecione...'"></select>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">C.Custo Externo</label>
+                <div class="col-sm-9">
+                    <input id="centroCustoCodigoExterno" name="centroCustoCodigoExterno" type="text" class="form-control" style="margin-top: 5px;" data-bind="value: centroCustoCodigoExterno" maxlength="50" />
+                </div>
+            </div>
         </div>
     </div>
-    <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right">C.Custo</label>
-        <div class="col-sm-10">
-            <select id="centroCusto" name="centroCusto" class="form-control" data-bind="options: centroCustoList, optionsValue: 'centroCustoId', optionsText: 'nome', value: id, optionsCaption: 'Selecione...'"></select>
+
+    <div class="row">
+        <div class="col-lg-6 col-sm-6">
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Usuário</label>
+                <div class="col-sm-9">
+                    <input type="text" id="createUsuarioId" name="createUsuarioId" class="form-control autocomplete-usuario" style="margin-top: 5px;" />
+                    <p class="help-block">Informe os 3 primeiros caracteres referentes ao nome do usuário.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Gerência</label>
+                <div class="col-sm-9">
+                    <input id="gerenciaNome" name="gerenciaNome" type="text" class="form-control" style="margin-top: 5px;" data-bind="value: gerenciaNome" maxlength="50" />
+                </div>
+            </div>
         </div>
     </div>
-    <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right">C.Custo Externo</label>
-        <div class="col-sm-10">
-            <input id="centroCustoCodigoExterno" name="centroCustoCodigoExterno" type="text" class="form-control" style="margin-top: 5px;" data-bind="value: centroCustoCodigoExterno" maxlength="50" />
+
+    <div class="row">
+        <div class="col-lg-6 col-sm-6">
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Projeto</label>
+                <div class="col-sm-9">
+                    <select id="projetoId" name="projetoId" class="form-control" data-bind="options: projetoList, optionsValue: 'projetoId', optionsText: 'nome', value: id, optionsCaption: 'Selecione...'"></select>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Status</label>
+                <div class="col-sm-9">
+                    <select id="statusId" name="statusId" class="form-control" data-bind="options: statusList, optionsValue: 'statusId', optionsText: 'nome', value: id, optionsCaption: 'Selecione...'"></select>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right">Usuário</label>
-        <div class="col-sm-10">
-            <input type="text" id="createUsuarioId" name="createUsuarioId" class="form-control autocomplete-usuario" style="margin-top: 5px;" />
-            <p class="help-block">Informe os 3 primeiros caracteres referentes ao nome do usuário.</p>
+
+        
+        
+        <div class="form-group">
+            <label class="col-sm-2 control-label no-padding-right">Número Documento</label>
+            <div class="col-sm-10">
+                <input id="numeroDocumento" name="numeroDocumento" type="text" class="form-control" style="margin-top: 5px;" data-bind="value: numeroDocumento" maxlength="50" />
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right">Gerência</label>
-        <div class="col-sm-10">
-            <input id="gerenciaNome" name="gerenciaNome" type="text" class="form-control" style="margin-top: 5px;" data-bind="value: gerenciaNome" maxlength="50" />
+        <div class="form-group">
+            <label class="col-sm-2 control-label no-padding-right">Placa</label>
+            <div class="col-sm-10">
+                <input id="placa" name="placa" type="text" class="form-control" style="margin-top: 5px;" data-bind="value: placa" maxlength="50" />
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right">Projeto</label>
-        <div class="col-sm-10">
-            <select id="projetoId" name="projetoId" class="form-control" data-bind="options: projetoList, optionsValue: 'projetoId', optionsText: 'nome', value: id, optionsCaption: 'Selecione...'"></select>
+        <div class="form-group">
+            <label class="col-sm-2 control-label no-padding-right">Descrição</label>
+            <div class="col-sm-10">
+                <input id="descricao" name="descricao" type="text" class="form-control" style="margin-top: 5px;" data-bind="value: descricao" maxlength="50" />
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right">Status</label>
-        <div class="col-sm-10">
-            <select id="statusId" name="statusId" class="form-control" data-bind="options: statusList, optionsValue: 'statusId', optionsText: 'nome', value: id, optionsCaption: 'Selecione...'"></select>
+        <div class="form-group">
+            <label class="col-sm-2 control-label no-padding-right">Data Despesa</label>
+            <div class="col-sm-10">
+                <input id="dataDespesa" name="dataDespesa" type="text" class="form-control" style="margin-top: 5px;" data-bind="value: dataDespesa" maxlength="50" />
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right">Número Documento</label>
-        <div class="col-sm-10">
-            <input id="numeroDocumento" name="numeroDocumento" type="text" class="form-control" style="margin-top: 5px;" data-bind="value: numeroDocumento" maxlength="50" />
+        <div class="form-group">
+            <label class="col-sm-2 control-label no-padding-right">Valor (R$)</label>
+            <div class="col-sm-10">
+                <input id="valor" name="valor" type="text" class="form-control" style="margin-top: 5px;" data-bind="value: valor" />
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right">Placa</label>
-        <div class="col-sm-10">
-            <input id="placa" name="placa" type="text" class="form-control" style="margin-top: 5px;" data-bind="value: placa" maxlength="50" />
+        <div class="form-group">
+            <label class="col-sm-2 control-label no-padding-right">Observação</label>
+            <div class="col-sm-10">
+                <input id="observacao" name="observacao" type="text" class="form-control" style="margin-top: 5px;" data-bind="value: observacao" maxlength="50" />
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right">Descrição</label>
-        <div class="col-sm-10">
-            <input id="descricao" name="descricao" type="text" class="form-control" style="margin-top: 5px;" data-bind="value: descricao" maxlength="50" />
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right">Data Despesa</label>
-        <div class="col-sm-10">
-            <input id="dataDespesa" name="dataDespesa" type="text" class="form-control" style="margin-top: 5px;" data-bind="value: dataDespesa" maxlength="50" />
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right">Valor (R$)</label>
-        <div class="col-sm-10">
-            <input id="valor" name="valor" type="text" class="form-control" style="margin-top: 5px;" data-bind="value: valor" />
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right">Observação</label>
-        <div class="col-sm-10">
-            <input id="observacao" name="observacao" type="text" class="form-control" style="margin-top: 5px;" data-bind="value: observacao" maxlength="50" />
-        </div>
-    </div>
 </form>
