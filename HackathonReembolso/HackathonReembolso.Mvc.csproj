@@ -149,20 +149,23 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CargoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\BreadCrumbModel.cs" />
+    <Compile Include="Models\CargoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\ico.png" />
     <Content Include="Content\images\logo.png" />
     <Content Include="Content\js\ajax-setup.js" />
+    <Content Include="Content\js\cadastros\cargo\cargo-classes.ko.js" />
+    <Content Include="Content\js\cadastros\cargo\cargo.ko.js" />
+    <Content Include="Content\js\cadastros\cargo\cargo.setup.js" />
     <Content Include="Content\js\core\HttpProxy.js" />
     <Content Include="Content\dataTables\css\dataTables.bootstrap.min.css" />
     <Content Include="Content\dataTables\css\jquery.dataTables.min.css" />
@@ -477,7 +480,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -765,10 +767,13 @@
     <Content Include="Views\Shared\_BreadCrumb.cshtml" />
     <Content Include="Views\Shared\_Menu.cshtml" />
     <Content Include="Views\Shared\_HeaderButtons.cshtml" />
+    <Content Include="Views\Cargo\Index.cshtml" />
+    <Content Include="Views\Cargo\_Index.cshtml" />
+    <Content Include="Views\Cargo\_Create.cshtml" />
+    <Content Include="Views\Cargo\_Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\js\cadastros\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -32,6 +32,12 @@ namespace HackathonReembolso.Mvc
                         .Include("~/Content/js/menu/menu.js")
                         .Include("~/Content/js/menu/menu-json-helper.js")
                         .Include("~/Content/js/menu/menu-setup.js"));
+
+            // cadastro de cargos
+            bundles.Add(new Bundle("~/bundles/js/cargo")
+                        .Include("~/Content/js/cadastros/cargo/cargo-classes.ko.js")
+                        .Include("~/Content/js/cadastros/cargo/cargo.ko.js")
+                        .Include("~/Content/js/cadastros/cargo/cargo.setup.js"));
         }
     }
 }

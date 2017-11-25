@@ -29,17 +29,6 @@
     var customClearFilterVar = null;
     var customValidateFilterVar = null;
 
-    // values list of field "Status Registro"
-    self.statusRegistroList = ko.observableArray([
-        new StatusRegistroModel("S", "Ativo"),
-        new StatusRegistroModel("N", "Inativo")
-    ]);
-
-    self.booleanList = ko.observableArray([
-        new StatusRegistroModel("S", "Sim"),
-        new StatusRegistroModel("N", "Não")
-    ]);
-
     self.isNull = function (obj) {
         return obj === null || obj === undefined;
     };
@@ -302,7 +291,7 @@
         $("#" + self.divFilter).find("#btnEdit").text("Filtrar").attr("data-bind", dataBindFilter);
     };
 
-    self.loadTable = function () {
+    self._loadTable = function () {
         self.pageNumber(1);
         self.recordsPerPage(Number($("#recordsPerPage").val()));
         self.totalPages(1);
