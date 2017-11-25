@@ -38,6 +38,12 @@ namespace HackathonReembolso.Mvc
                         .Include("~/Content/js/cadastros/cargo/cargo-classes.ko.js")
                         .Include("~/Content/js/cadastros/cargo/cargo.ko.js")
                         .Include("~/Content/js/cadastros/cargo/cargo.setup.js"));
+
+            // cadastro de centro de custos
+            bundles.Add(new Bundle("~/bundles/js/centro-custo")
+                        .Include("~/Content/js/cadastros/centro-custo/centro-custo-classes.ko.js")
+                        .Include("~/Content/js/cadastros/centro-custo/centro-custo.ko.js")
+                        .Include("~/Content/js/cadastros/centro-custo/centro-custo.setup.js"));
         }
     }
 }

@@ -1,34 +1,38 @@
-﻿var CargoKo = function () {
+﻿var CentroCustoKo = function () {
     var self = this;
     ko.utils.extend(self, new ModelBase(self));
 
     // campos do formulário
     self.id = ko.observable(0);
     self.descricao = ko.observable("");
+    self.codigoExterno = ko.observable("");
 
     // limpa os campos
     self.resetValues = function () {
         self.id(0);
         self.descricao("");
+        self.codigoExterno("");
     };
 
     // pesquisa
     var modelFunction = function (item) {
         console.log(item);
-        return new CargoModel(item.Id, item.Descricao)
+        return new CentroCustoModel(item.Id, item.Descricao, item.CodigoExterno);
     };
 
     // define a base para pesquisa
-    self._changeSearchStructure("/Cargo/Search", modelFunction);
+    self._changeSearchStructure("/CentroCusto/Search", modelFunction);
 
     // cria um novo registro
     self.submit = function (item) {
         var dataCreate = {
-            Descricao: item.descricao()
+            Descricao: item.descricao(),
+            CodigoExterno: item.codigoExterno()
         };
         var dataEdit = {
             Id: item.id(),
-            Descricao: item.descricao()
+            Descricao: item.descricao(),
+            CodigoExterno: item.codigoExterno()
         };
         var fnCreate = function (data) {
             self.resetValues();
@@ -39,7 +43,7 @@
             self._loadTable();
         };
         var form = !self.isNew() ? $('#frmEdit') : $('#frmCreate'),
-            url = !self.isNew() ? "/Cargo/Edit" : "/Cargo/Create",
+            url = !self.isNew() ? "/CentroCusto/Edit" : "/CentroCusto/Create",
             data = !self.isNew() ? dataEdit : dataCreate,
             fn = !self.isNew() ? fnEdit : fnCreate;
 
@@ -51,22 +55,9 @@
         var fn = function () {
             self.id(item.id);
             self.descricao(item.descricao);
+            self.codigoExterno(item.descricao);
         };
         self._modalDetails(fn);
-    };
-
-    // remove um registro do banco    
-    self.delete = function (item) {
-        var callback = function () {
-            var url = Gsnet.Site().URL() + '/Cargo/Delete';
-            var data = { id: item.id };
-            var fn = function (data) {
-                self._loadTable();
-            };
-
-            self._delete($("#divDelete"), $('#frmDelete'), url, data, fn);
-        };
-        Gsnet.Dialogs().confirmDelete("divDelete", "<form id='frmDelete' name='frmDelete' class='form-horizontal'><span>Deseja excluir o item '" + item.descricao + "' ?</span></form>", callback, null);
     };
 
     // create modal
@@ -79,6 +70,7 @@
         var fn = function () {
             self.id(item.id);
             self.descricao(item.descricao);
+            self.codigoExterno(item.codigoExterno);
         };
         self._modalEdit(fn);
     };
@@ -90,13 +82,15 @@
         self.bindValidate(
             $("#frmCreate"),
             rules = {
-                descricao: { required: true }
+                descricao: { required: true },
+                codigoExterno: { required: true }
             }
         );
         self.bindValidate(
             $("#frmEdit"),
             rules = {
-                descricao: { required: true }
+                descricao: { required: true },
+                codigoExterno: { required: true }
             }
         );
         self._loadTable();

@@ -150,6 +150,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CargoController.cs" />
+    <Compile Include="Controllers\CentroCustoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
@@ -157,12 +158,16 @@
     </Compile>
     <Compile Include="Models\BreadCrumbModel.cs" />
     <Compile Include="Models\CargoModel.cs" />
+    <Compile Include="Models\CentroCustoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\images\ico.png" />
     <Content Include="Content\images\logo.png" />
     <Content Include="Content\js\ajax-setup.js" />
+    <Content Include="Content\js\cadastros\centro-custo\centro-custo-classes.ko.js" />
+    <Content Include="Content\js\cadastros\centro-custo\centro-custo.ko.js" />
+    <Content Include="Content\js\cadastros\centro-custo\centro-custo.setup.js" />
     <Content Include="Content\js\cadastros\cargo\cargo-classes.ko.js" />
     <Content Include="Content\js\cadastros\cargo\cargo.ko.js" />
     <Content Include="Content\js\cadastros\cargo\cargo.setup.js" />
@@ -771,6 +776,10 @@
     <Content Include="Views\Cargo\_Index.cshtml" />
     <Content Include="Views\Cargo\_Create.cshtml" />
     <Content Include="Views\Cargo\_Edit.cshtml" />
+    <Content Include="Views\CentroCusto\Index.cshtml" />
+    <Content Include="Views\CentroCusto\_Create.cshtml" />
+    <Content Include="Views\CentroCusto\_Edit.cshtml" />
+    <Content Include="Views\CentroCusto\_Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
